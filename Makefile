@@ -1,5 +1,5 @@
 build:
-	go build proxy.go
+	go build -o proxy.exe proxy.go
 
 run:
-	go build proxy.go && ./proxy
+	go build -o proxy.exe proxy.go  && ./proxy.exe
