@@ -15,7 +15,7 @@ const NO_METHOD = 0xff
 
 func err(e error) {
 	if e != nil {
-		panic(e)
+		fmt.Println(e)
 	}
 }
 
