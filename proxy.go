@@ -55,14 +55,14 @@ func handle_new_connection(conn net.Conn) {
 	switch method {
 	case NO_AUTH:
 		{
-			estable_connection(conn, NO_AUTH)
+			establish_connection(conn, NO_AUTH)
 		}
 	default:
 		panic("Method not supported")
 	}
 }
 
-func estable_connection(conn net.Conn, method int) {
+func establish_connection(conn net.Conn, method int) {
 
 	conn.Write([]byte{VER_5, byte(method)})
 	request := make([]byte, 100)
